@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionamento de Dispositivo</title>
+    <script>
+        // Função para redirecionar com base no tipo de dispositivo
+        function redirecionar() {
+            // Verifica se é um dispositivo móvel
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                window.location.href = 'Mobile/index.html'; // Redireciona para o HTML mobile
+            } else {
+                window.location.href = 'Desktop/index.html'; // Redireciona para o HTML desktop
+            }
+        }
+    </script>
+</head>
+<body onload="redirecionar()">
+    <!-- Conteúdo de backup para usuários com JavaScript desativado -->
+    <noscript>
+        <p>Por favor, ative o JavaScript para continuar.</p>
+        <meta http-equiv="refresh" content="0;url=pagina-desktop.html">
+    </noscript>
+</body>
+</html>
